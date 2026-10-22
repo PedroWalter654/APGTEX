@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APGTEX — Bonés sob medida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav wrap">
+    <div class="brand"><span class="dot"></span>APGTEX</div>
+    <nav id="mainNav"><ul>
+      <li><a href="#catalogo">Catálogo</a></li>
+      <li><a href="#ajustador">Ajustador</a></li>
+      <li><a href="#orcamento">Orçamento</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul></nav>
+    <a class="nav-cta" href="#orcamento">Fazer pedido</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Fábrica própria · Irati, PR</span>
+    <h1>BONÉ SOB<br><span>MEDIDA</span></h1>
+    <p class="lead">Da máquina de bordar direto pra sua cabeça. Modelos clássicos, bordado personalizado e prazo de até 20 dias — tudo produzido por nós.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#catalogo">Ver modelos</a>
+      <a class="btn btn-ghost" href="#orcamento">Simular preço</a>
+    </div>
+    <div class="stat-row">
+      <div class="stat"><div class="num">10 unidades</div><div class="lbl">Pedido mínimo</div></div>
+      <div class="stat"><div class="num">20</div><div class="lbl">Dias de prazo</div></div>
+      <div class="stat"><div class="num">100%</div><div class="lbl">Produção própria</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="process reveal">
+  <div class="wrap">
+    <div class="process-grid">
+      <div class="process-item">
+        <div class="n">01</div>
+        <h3>Escolha o modelo</h3>
+        <p>Selecione a estrutura e a cor no catálogo.</p>
+      </div>
+      <div class="process-item">
+        <div class="n">02</div>
+        <h3>Defina o bordado</h3>
+        <p>Frente incluso. Adicione bordados extras se quiser.</p>
+      </div>
+      <div class="process-item">
+        <div class="n">03</div>
+        <h3>Confirme pelo WhatsApp</h3>
+        <p>Fechamos os detalhes e a forma de pagamento direto com você.</p>
+      </div>
+      <div class="process-item">
+        <div class="n">04</div>
+        <h3>Produção e entrega</h3>
+        <p>Prazo máximo de 20 dias, direto da fábrica.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="catalogo" class="reveal">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tag">Catálogo</span>
+      <h2>Modelos disponíveis</h2>
+      <p>Todos os preços já incluem um bordado na frente. Bordados extras: +R$6 cada.</p>
+    </div>
+    <div class="catalog-grid" id="catalogGrid"></div>
+  </div>
+</section>
+
+<section id="ajustador" class="reveal">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tag">Personalização</span>
+      <h2>Escolha o ajustador</h2>
+      <p>Tamanho único — o ajustador é o que garante o encaixe perfeito na cabeça.</p>
+    </div>
+    <div class="closure-grid" id="closureGrid"></div>
+  </div>
+</section>
+
+<section id="orcamento" class="reveal" style="background:var(--charcoal); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tag">Orçamento rápido</span>
+      <h2>Simule o valor do seu pedido</h2>
+      <p>Escolha o modelo, a quantidade de bordados extras e a quantidade de bonés.</p>
+    </div>
+    <div class="calc">
+      <div>
+        <h3>Monte seu boné</h3>
+        <p>O valor é calculado na hora. Depois é só confirmar pelo WhatsApp.</p>
+        <div class="field">
+          <label>Modelo</label>
+          <select id="modelSelect"></select>
+        </div>
+        <div class="field">
+          <label>Ajustador</label>
+          <select id="closureSelect"></select>
+        </div>
+        <div class="field">
+          <label>Bordados adicionais (além do da frente) · máx. 15</label>
+          <div class="stepper">
+            <button type="button" id="embMinus">−</button>
+            <span id="embCount">0</span>
+            <button type="button" id="embPlus">+</button>
+          </div>
+        </div>
+        <div class="field">
+          <label>Quantidade de bonés</label>
+          <input type="number" id="qtyInput" value="10" min="10">
+        </div>
+      </div>
+      <div class="calc-result">
+        <div class="rlabel">Valor estimado</div>
+        <div class="rvalue" id="totalPrice">R$25</div>
+        <div class="rnote">Prazo de produção: até 20 dias</div>
+        <a class="btn btn-primary" id="waLink" href="#" target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre" class="reveal">
+  <div class="wrap about">
+    <div class="about-visual">
+      <img src="LogoAPGTEX.jpeg" alt="Logo APGTEX">
+    </div>
+    <div>
+      <h2>Uma fábrica, quatro sócios, um boné feito do começo ao fim</h2>
+      <p>A APGTEX nasceu da união de quatro sócios que assumiram uma fábrica de bonés já em funcionamento, com maquinário industrial completo — da costura ao bordado.</p>
+      <ul>
+        <li>Máquinas industriais de costura, overlock e bordado</li>
+        <li>Bordado próprio, sem terceirização</li>
+        <li>Atendimento direto com quem produz</li>
+        <li>Prazo médio de 20 dias por pedido</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="contact reveal">
+  <div class="wrap">
+    <h2>Vamos bordar o seu boné</h2>
+    <p>Fale direto com a gente pelo WhatsApp e monte seu pedido do jeito que quiser.</p>
+    <a class="btn btn-primary" id="waLinkBottom" href="#" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  APGTEX — Fábrica de bonés · Irati, PR
+</footer>
+
+<a href="#" id="floatingWA" class="floating-wa" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">💬</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>
